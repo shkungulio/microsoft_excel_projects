@@ -36,14 +36,6 @@ If I type EXCEL in cell C5, the extracted letters (E, X, C, E, L) convert to val
 
 To make the project more engaging, I also experimented with a few optional enhancements. I applied conditional formatting to highlight high-value letters, added data validation to restrict input to alphabetic characters, and even explored creating a Scrabble-style scoring system. These tweaks made the spreadsheet more interactive while helping me apply Excel’s visual and validation tools.
 
-This project draws on three main files:
-
-Mastering_Excel_Through_Projects.pdf — the instructional material (pages 25–31).
-
-formula.pdf — my quick reference sheet listing all formulas.
-
-english_word_game.xlsx — the actual Excel file where I implemented and tested everything.
-
 Completing this project taught me how to combine multiple Excel functions into a cohesive system. It’s a perfect example of how seemingly simple functions—like MID, CHAR, LOOKUP, and IFERROR—can work together to build an elegant, logic-driven solution. More importantly, it showed me how Excel can be used creatively, not just analytically.
 
 In short, building the English Word Game helped me strengthen my understanding of text manipulation, lookups, and conditional logic in Excel, while also reinforcing good formula design and debugging habits. It’s a small but powerful demonstration of how structured thinking and attention to detail can turn a spreadsheet into a functional, interactive model.
