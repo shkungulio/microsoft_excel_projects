@@ -1,4 +1,4 @@
-English Word Game
+<h2>English Word Game</h2>
 
 I created this project, English Word Game, with the intent to use Excel formulas to build a fun and practical tool that converts English words into numerical scores. By doing so, I reinforced key Excel skills like text manipulation, lookups, logical testing, and cell referencing—all through a creative challenge.
 
@@ -9,23 +9,23 @@ Next, I set up the main input cell in C5, where I can type any English word I wa
 To display the alphabet dynamically, I used the formula =CHAR(64+B4). This takes advantage of Excel’s character encoding system, where 65 corresponds to “A.” By offsetting the number by 64, I can easily generate letters A–Z as I fill the formula down through the rows. This gave my worksheet a dynamic alphabet reference without typing each letter manually.
 
 To extract letters from the input word, I used the MID() function:
-
+```
 =MID($C$5, B4, 1)
-
+```
 
 This formula isolates a single character from the word in C5. The $C$5 reference is absolute so that it stays fixed, while B4 changes with each row to extract the next letter. I love how this technique makes the extraction process both clean and scalable—it works for any word length up to 26 characters.
 
 After pulling each letter, I used a lookup formula to assign its numeric value:
-
+```
 =IFERROR(LOOKUP(F4, $A$4:$B$29), "")
-
+```
 
 This line looks up the extracted letter (from column F) in the alphabet table and returns the corresponding number. To make the worksheet more user-friendly, I wrapped the formula in an IFERROR() function so that empty cells don’t show distracting error messages.
 
 Once each letter’s numeric score was calculated, I summed them all using:
-
+```
 =IF(SUM(G:G)=0, "", SUM(G:G))
-
+```
 
 This ensures that if no word is entered (and therefore no valid values exist), the cell remains blank. Otherwise, it calculates the total “word score” by summing all the numeric letter values.
 
